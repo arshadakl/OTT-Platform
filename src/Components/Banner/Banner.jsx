@@ -2,11 +2,11 @@ import React from 'react'
 import './Banner.css'
 import NavBar from '../NavBar/NavBar'
 import Row from '../Row/Row'
-function Banner() {
+function Banner({scrolled}) {
     return (
         <>
             <div className=' banner-main'>
-                <NavBar />
+                <NavBar scrolled={scrolled} />
                 <div className="container-fluid  display-shadow">
 
                 <div className="px-5 d-flex justify-content-center  ">
@@ -25,7 +25,7 @@ function Banner() {
                     </div>
 
 
-                    <div className="col-md-6 "> test2</div>
+                    <div className="col-md-6 "> </div>
                 </div>
                 
             <Row/>

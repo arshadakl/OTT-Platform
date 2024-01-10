@@ -11,11 +11,12 @@
     padding: 20px;
     overflow-x: scroll;
     /* overflow-y:hidden ; */
-    background: rgb(0, 0, 0);
-    background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0.8632703081232493) 0%, rgba(202, 223, 242, 0) 100%);
+    /* background: rgb(0, 0, 0); */
+    /* background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0.8632703081232493) 0%, rgba(202, 223, 242, 0) 100%);
     background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.8632703081232493) 0%, rgba(202, 223, 242, 0) 100%);
     background: linear-gradient(270deg, rgba(0, 0, 0, 0.8632703081232493) 0%, rgba(202, 223, 242, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#cadff2", GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#cadff2", GradientType=1); */
+    /* position: fixed; */
 }
 
 .posters::-webkit-scrollbar {
@@ -28,4 +29,17 @@
     margin-right: 10px;
     width: 230px;
     border-radius: 4px;
+}
+
+.side-shadow {
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 80vh;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(275deg, rgba(0, 0, 0, 0.5663515406162465) 0%, rgba(202, 223, 242, 0) 100%);
+    background: -webkit-linear-gradient(275deg, rgba(0, 0, 0, 0.5663515406162465) 0%, rgba(202, 223, 242, 0) 100%);
+    background: linear-gradient(275deg, rgba(0, 0, 0, 0.5663515406162465) 0%, rgba(202, 223, 242, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#cadff2", GradientType=1);
 }

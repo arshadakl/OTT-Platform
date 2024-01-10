@@ -8,8 +8,8 @@ function Footer() {
         <ul className='d-flex justify-content-evenly col-3 text-white'>
             <i className="fa-brands  fa-facebook-f"></i>
             <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
             </ul>
         </div>
         </div>
