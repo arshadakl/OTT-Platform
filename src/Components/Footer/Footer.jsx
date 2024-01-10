@@ -1,10 +1,10 @@
 import React from 'react'
-
+import './Footer.css'
 function Footer() {
   return (
     <>
-    <div className='col-12 container px-5 '>
-        <div className=" mx-5 px-5">
+    <div className='col-12 container px-5 social-medias'>
+        <div className=" mx-5 px-4 ">
         <ul className='d-flex justify-content-evenly col-3 text-white'>
             <i className="fa-brands  fa-facebook-f"></i>
             <i className="fa-brands fa-instagram"></i>
@@ -38,6 +38,11 @@ function Footer() {
                 <p>Legal Notices</p>
             </ul></div>
     </div>
+    <div className='col-12 container px-5 '>
+        <div className=" mx-5 px-5 ">
+    <p className='copyright pt-3 px-4 '>© 1997-2024 Netflix, Inc.</p>
+        </div>
+        </div>
     </>
   )
 }

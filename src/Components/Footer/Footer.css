@@ -1,4 +1,12 @@
 .Footer-area{
     height: 8rem;
-    padding-top: 5rem;
+    padding-bottom: 1rem;
+
+}
+.social-medias{
+    padding-top: 6rem ;
+
+}
+.copyright{
+    color: #7b7b7b;
 }
