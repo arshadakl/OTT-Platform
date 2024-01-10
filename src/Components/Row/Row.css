@@ -1,0 +1,31 @@
+.row {
+    /* margin-left: 20rem; */
+    color: #fff;
+    /* background: #000; */
+    margin: 1rem 0.5rem 0rem 2rem;
+    padding: 0;
+}
+
+.posters {
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    /* overflow-y:hidden ; */
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0.8632703081232493) 0%, rgba(202, 223, 242, 0) 100%);
+    background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.8632703081232493) 0%, rgba(202, 223, 242, 0) 100%);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.8632703081232493) 0%, rgba(202, 223, 242, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#cadff2", GradientType=1);
+}
+
+.posters::-webkit-scrollbar {
+    display: none;
+}
+
+
+.poster {
+    max-height: 250px;
+    margin-right: 10px;
+    width: 230px;
+    border-radius: 4px;
+}
