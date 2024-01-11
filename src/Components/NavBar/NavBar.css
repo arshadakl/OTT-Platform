@@ -1,6 +1,9 @@
 .navBar {
     height: 4.5rem;
     position: fixed;
+    transition: all 1s;
+    z-index: 100;
+
 }
 #nonetransp{
     background: #000;

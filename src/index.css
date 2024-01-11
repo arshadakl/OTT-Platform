@@ -17,3 +17,8 @@ body {
   min-height: 100vh;
   background: #000;
 }
+
+.row-areas{
+  margin: 8rem 0rem 0rem 1rem;
+
+}

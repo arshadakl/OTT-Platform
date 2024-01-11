@@ -6,6 +6,7 @@ import Footer from './Components/Footer/Footer'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [banner,setBanner] = useState({})
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +29,11 @@ function App() {
   return (
     <>
    
-     <Banner scrolled={scrolled}/>
-     <Row/>
+     <Banner title={"Popular on Netflix"} scrolled={scrolled}/>
+     <div className='row-areas'>
+     <Row title={"Romance"} genres={10749}/>
+     <Row title={"Horror"} genres={27}/>
+     </div>
      <Footer/>
     </>
   )

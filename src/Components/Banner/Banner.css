@@ -1,7 +1,9 @@
 .banner-main {
     height: 100vh;
-    background: url("https://occ-0-7777-3663.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABXyOE5sIubi-e76P_K8youuKTNBHsv18zj0zb8ZDiR1KV0ue0yN3v3kVfAYyRWzY405ZurfcnI4IK5IA98KEzBtOvZyoWLi4E-ez.webp?r=5b1");
+    /* background: url("https://image.tmdb.org/t/p/original/1jITxVJhkiFJuQuj8NcPLmDNtJg.jpg"); */
     background-size: cover;
+    transition: all 1.5s;
+
 
 }
 
@@ -9,12 +11,16 @@
     font-family: Bebas Neue;
     font-size: 5rem;
     margin: 0;
+    transition: all 1s;
+
 }
 
 .movie-discription {
     width: 80%;
     font-family: Poppins;
     font-weight: 400;
+    transition: all 1s;
+
 
 }
 
