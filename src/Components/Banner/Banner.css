@@ -1,6 +1,5 @@
 .banner-main {
     height: 100vh;
-    /* background: url("https://image.tmdb.org/t/p/original/1jITxVJhkiFJuQuj8NcPLmDNtJg.jpg"); */
     background-size: cover;
     transition: all 1.5s;
 
@@ -86,3 +85,29 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(202,223,242,0) 63%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#cadff2",GradientType=1);
     height: 101vh;
 }
+
+
+
+
+.banner-main {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .video-container {
+    position: absolute;
+    top: -6rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+  }
+  
+  .overlay-content {
+    position: relative;
+    z-index: 1;
+  }
