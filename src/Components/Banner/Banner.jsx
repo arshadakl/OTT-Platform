@@ -6,7 +6,7 @@ import axios from '../../Axios';
 import { API_KEY } from '../../Constant/constant';
 import YouTube from 'react-youtube';
 
-function Banner({ scrolled, title }) {
+function Banner({ scrolled, title,target,setTarget }) {
     const truncateText = (text, maxLength) => {
         if (text.length <= maxLength) {
             return text;
@@ -96,7 +96,7 @@ function Banner({ scrolled, title }) {
                             </div>
                             <div className="col-md-6"></div>
                         </div>
-                        <Row title={title} />
+                        <Row target={target} setTarget={setTarget} title={title} />
                     </div>
                 </div>
             </div>

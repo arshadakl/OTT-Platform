@@ -1,42 +1,80 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import './Row.css'
 import axios from '../../Axios'
 import { API_KEY, BasrUrl, IMG_BASE } from '../../Constant/constant'
-IMG_BASE
+import YouTube from 'react-youtube';
 
-function Row({genres,title}) {
 
-  const [movie,setMovies] = useState([])
+function Row({ genres, title, setTarget, target }) {
+
+  const opts = {
+    height:155,
+    width: 230,
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      showinfo: 0,
+      mute: 1,
+      loop: 1,
+      playlist: "XD_MLvGrGCY",
+    },
+  };
+
+  const [movie, setMovies] = useState([])
+  const manageTarget = (index,status) => {
+    setTarget({ index: index, status: status })
+  }
   useEffect(() => {
-    axios.get(`discover/movie?api_key=${API_KEY}&with_genres=${genres}`).then((response)=>{
+    axios.get(`discover/movie?api_key=${API_KEY}&with_genres=${genres}`).then((response) => {
       // console.log(response.data.results);
       setMovies(response.data.results)
-      console.log(movie);
+      // console.log(movie);
     })
   }, [])
-  
+
   return (
     <div className='row pt-5'>
       <h4>{title}</h4>
 
-        <div className='posters '>
+      <div className='posters '>
 
-        {movie.map((item,)=>{
-          return(
-            <img key={item.id} className='poster' src={`${IMG_BASE}w400${item.poster_path}`} alt="" />
-            // <div style={{backgroundImage: `URL(${IMG_BASE}w400${item.backdrop_path})` }} className=' poster-div d-flex'>
-            //   <div className='inner d-flex'>
-                
-            //     <h6 className='d-flex align-items-end py-3 px-4'>{item.title}</h6>
+        {movie.map((item, index) => {
+          return (
 
-            //     </div>
-            // </div>
+
+            
+            // <img key={item.id} className='poster' src={`${IMG_BASE}w400${item.poster_path}`} alt="" />
+            
+            <div key={index} onMouseEnter={() => manageTarget(item.id, true)}
+              onMouseLeave={() => manageTarget(item.id, false)}
+              style={target.index !== item.id ? { backgroundImage: `URL(${IMG_BASE}w400${item.backdrop_path})` }:null} className=' poster-div d-flex'>
+              {target.index == item.id ?
+                  <div className={target.index == item.id && target.status==true ? " activeTarget trilarView overlay-content" : "disActive"} >
+                    <YouTube videoId="XD_MLvGrGCY" opts={opts} />
+
+                  </div> : null
+                  
+                }
+                {target.index !== item.id ? 
+                  <div className='inner d-flex overlay-content'>
+                  <h6 className='d-flex align-items-end py-3 px-4'>{item.title}</h6>
+                  
+                  {/* <div className={target.index==item.id ? "bg-danger activeTarget" : "disActive"} >
+                                  <YouTube videoId="XD_MLvGrGCY" opts={opts} />
+  
+                    </div> */}
+  
+                </div>: null
+                }
+              
+            </div>
 
           )
         })}
-          
-        </div>
-          <div className='side-shadow '> </div>
+
+      </div>
+      <div className='side-shadow '> </div>
+
 
     </div>
   )
