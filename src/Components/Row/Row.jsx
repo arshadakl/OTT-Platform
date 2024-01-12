@@ -6,7 +6,8 @@ import YouTube from 'react-youtube';
 
 
 function Row({ genres, title, setTarget, target }) {
-
+  const [movie, setMovies] = useState([])
+  const [trailer,setTrailer] = useState('')
   const opts = {
     height:155,
     width: 230,
@@ -14,15 +15,21 @@ function Row({ genres, title, setTarget, target }) {
       autoplay: 1,
       controls: 0,
       showinfo: 0,
+      modestbranding: 0,
       mute: 1,
       loop: 1,
-      playlist: "XD_MLvGrGCY",
     },
   };
 
-  const [movie, setMovies] = useState([])
-  const manageTarget = (index,status) => {
+  
+
+  const manageTarget = async (index,status) => {
     setTarget({ index: index, status: status })
+    const trailerResponse = await axios.get(`/movie/${index}/videos?api_key=${API_KEY}&language=en-US`);
+    const trailerKey = trailerResponse.data.results.length > 0 ? trailerResponse.data.results[0].key : "";
+    setTrailer(trailerKey)
+    // console.log(trailerKey);
+
   }
   useEffect(() => {
     axios.get(`discover/movie?api_key=${API_KEY}&with_genres=${genres}`).then((response) => {
@@ -50,7 +57,7 @@ function Row({ genres, title, setTarget, target }) {
               style={target.index !== item.id ? { backgroundImage: `URL(${IMG_BASE}w400${item.backdrop_path})` }:null} className=' poster-div d-flex'>
               {target.index == item.id ?
                   <div className={target.index == item.id && target.status==true ? " activeTarget trilarView overlay-content" : "disActive"} >
-                    <YouTube videoId="XD_MLvGrGCY" opts={opts} />
+                    <YouTube videoId={trailer} opts={opts} />
 
                   </div> : null
                   
