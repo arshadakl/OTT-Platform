@@ -14,6 +14,10 @@ This React project recreates the Netflix experience, leveraging Vite for a smoot
 * **Optional:** Styling libraries (Styled Components, Emotion, etc.)
 * **Environment Variables**: For storing sensitive data like API keys
 
+![](https://github.com/arshadakl/assets/blob/main/ott-home.png?raw=true)
+
+![](https://github.com/arshadakl/assets/blob/main/ott-row.png?raw=true)
+
 **Getting Started:**
 
 1. **Prerequisites:** Node.js (version 18 or later) and npm installed on your system.
@@ -21,7 +25,7 @@ This React project recreates the Netflix experience, leveraging Vite for a smoot
 2. **Clone the Repository:**
 
    ```bash
-   git clone https://your-github-repository-url.git
+   git clone https://https://github.com/arshadakl/OTT-Platform.git
    ```
 
 3. **Install Dependencies:**
@@ -29,7 +33,7 @@ This React project recreates the Netflix experience, leveraging Vite for a smoot
    Navigate to the project directory and install dependencies:
 
    ```bash
-   cd your-project-name
+   cd OTT-Platform
    npm install
    ```
 
@@ -68,3 +72,4 @@ This React project recreates the Netflix experience, leveraging Vite for a smoot
    ```
 
 This will typically launch the application at http://localhost:5173
+
