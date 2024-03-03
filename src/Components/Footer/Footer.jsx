@@ -40,7 +40,7 @@ function Footer() {
     </div>
     <div className='col-12 container px-5 '>
         <div className=" mx-5 px-5 ">
-    <p className='copyright pt-3 px-4 '>© 1997-2024 Netflix, Inc.</p>
+    <p className='copyright pt-3 px-4 '>By <a href="https://arshadakl.in/">arshad</a></p>
         </div>
         </div>
     </>

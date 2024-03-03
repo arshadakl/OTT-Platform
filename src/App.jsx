@@ -50,10 +50,7 @@ function App() {
      <div className='row-areas'>
      <Row target={target} setTarget={setTarget} title={"Romance"} genres={10749}/>
      <Row target={target} setTarget={setTarget} title={"Horror"} genres={27}/>
-     {/* <div className='trilar-display'>
-                <YouTube videoId="XD_MLvGrGCY" opts={opts} />
-        
-      </div> */}
+     <Row target={target} setTarget={setTarget} title={"Action Movies"} genres={28}/>
      </div>
      <Footer/>
     </>
